@@ -564,21 +564,21 @@
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="early-bird-person"
                                                 id="early-bird-person">
-                                                <option value="1" selected>1 Person</option>
-                                                <option value="2">2 Persons</option>
+                                                <option value="1" selected>1 Orang</option>
+                                                {{-- <option value="2">2 Persons</option>
                                                 <option value="3">3 Persons</option>
                                                 <option value="4">4 Persons</option>
                                                 <option value="5">5 Persons</option>
                                                 <option value="6">6 Persons</option>
                                                 <option value="7">7 Persons</option>
-                                                <option value="8">8 Persons</option>
+                                                <option value="8">8 Persons</option> --}}
                                             </select>
                                         </div>
-                                        <div class="pricing-action px-5">
+                                        {{-- <div class="pricing-action px-5">
                                             <a href="#"
                                                 class="button button-large button-gradient btn-block m-0">Buy
                                                 Ticket</a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
 
@@ -594,21 +594,21 @@
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="1-day-pricing-person"
                                                 id="1-day-pricing-person">
-                                                <option value="1" selected>1 Person</option>
-                                                <option value="2">2 Persons</option>
+                                                <option value="1" selected>1 Orang</option>
+                                                {{-- <option value="2">2 Persons</option>
                                                 <option value="3">3 Persons</option>
                                                 <option value="4">4 Persons</option>
                                                 <option value="5">5 Persons</option>
                                                 <option value="6">6 Persons</option>
                                                 <option value="7">7 Persons</option>
-                                                <option value="8">8 Persons</option>
+                                                <option value="8">8 Persons</option> --}}
                                             </select>
                                         </div>
-                                        <div class="pricing-action px-5">
+                                        {{-- <div class="pricing-action px-5">
                                             <a href="#"
                                                 class="button button-large button-gradient btn-block m-0">Buy
                                                 Ticket</a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
 
@@ -975,10 +975,10 @@
                             <div class="widget clearfix">
                                 <div class="row clearfix">
                                     <div class="col-lg-8 bottommargin-sm clearfix" style="color:#888;">
-                                        <img src="/web/demos/app-landing/images/logo-dark@2x.png" alt="Canvas Logo"
-                                            style="display: block;" height="100">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, consequatur
-                                            facere molestiae iusto atque.</p>
+                                        <img src="/img/web/my-brother.png" alt="Canvas Logo" style="display: block;"
+                                            height="100">
+                                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, consequatur
+                                            facere molestiae iusto atque.</p> --}}
 
                                         <a href="#"
                                             class="social-icon si-small si-borderless si-colored si-rounded si-facebook">
@@ -1024,10 +1024,6 @@
                                         <ul class="pt-3">
                                             <li><a href="">Visiting Place</a></li>
                                             <li><a href="">Nearby Hotels</a></li>
-                                            <li><a href="">Public Transports</a></li>
-                                            <li><a href="">Weather Info</a></li>
-                                            <li><a href="">Food Cost</a></li>
-                                            <li><a href="">Accommodation </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1036,9 +1032,6 @@
                                         <ul class="pt-3">
                                             <li><a href="">Code Of Conduct</a></li>
                                             <li><a href="">Speakers</a></li>
-                                            <li><a href="">Sponsors</a></li>
-                                            <li><a href="">FAQs</a></li>
-                                            <li><a href="">Volunteers</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1070,9 +1063,7 @@
                 <div class="container clearfix">
 
                     <div class="w-100 text-center text-md-left">
-                        Copyrights &copy; 2021 All Rights Reserved by Canvas Inc.<br>
-                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy
-                                Policy</a></div>
+                        Copyrights &copy; 2023 All Rights Reserved by My Brother.<br>
                     </div>
 
                 </div>
