@@ -51,11 +51,11 @@
       ============================================= -->
                         <div id="logo" class="mr-lg-0">
                             <a href="#" data-scrollto="#slider" class="standard-logo"
-                                data-dark-logo="/image/my-brother.png">
-                                <img src="/image/my-brother.png" alt="Canvas Logo"></a>
+                                data-dark-logo="/img/my-brother.png">
+                                <img src="/img/my-brother.png" alt="My Brother"></a>
                             <a href="#" data-scrollto="#slider" class="retina-logo"
-                                data-dark-logo="/image/my-brother.png">
-                                <img src="/image/my-brother.png" alt="Canvas Logo"></a>
+                                data-dark-logo="/img/my-brother.png">
+                                <img src="/img/my-brother.png" alt="My Brother"></a>
                         </div><!-- #logo end -->
 
                         <div id="primary-menu-trigger">
@@ -161,7 +161,7 @@
                     <div class="container clearfix">
 
                         <div class="mb-5 dark">
-                            <span class="display-4 font-weight-bold gradient-underline font-primary">Temtang My Brother
+                            <span class="display-4 font-weight-bold gradient-underline font-primary">Tentang My Brother
                                 Haircare</span>
                         </div>
 
