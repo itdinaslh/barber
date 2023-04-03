@@ -552,7 +552,8 @@
                             <div class="row pricing align-items-center">
 
                                 <div class="col-lg-3 col-sm-6">
-                                    <div class="pricing-box disabled text-center">
+                                    {{-- <div class="pricing-box disabled text-center"> --}}
+                                    <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
                                             <h3 class="nott ls0">Haircut and Grooming </h3>
                                             {{-- <span>Valid until 28th Feb</span> --}}
@@ -584,11 +585,11 @@
                                 <div class="col-lg-3 col-sm-6 mt-4 mt-sm-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">1 Day Pass</h3>
-                                            <span class="nott">Valid until 19th March</span>
+                                            <h3 class="nott ls0">Anak-Anak</h3>
+                                            {{-- <span class="nott">Valid until 19th March</span> --}}
                                         </div>
                                         <div class="pricing-price 1-day-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>29
+                                            <span class="price-unit">&dollar;</span>35.000
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="1-day-pricing-person"
