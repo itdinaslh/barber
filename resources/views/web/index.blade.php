@@ -29,7 +29,7 @@
 
     <!-- Document Title
  ============================================= -->
-    <title>My Brother | Haircare</title>
+    <title>My Brother | Haircare Depok</title>
 
 </head>
 
@@ -52,10 +52,10 @@
                         <div id="logo" class="mr-lg-0">
                             <a href="#" data-scrollto="#slider" class="standard-logo"
                                 data-dark-logo="/img/my-brother.png">
-                                <img src="/img/my-brother.png" alt="My Brother"></a>
+                                <img src="/img/my-brother.png" alt="Canvas Logo"></a>
                             <a href="#" data-scrollto="#slider" class="retina-logo"
                                 data-dark-logo="/img/my-brother.png">
-                                <img src="/img/my-brother.png" alt="My Brother"></a>
+                                <img src="/img/my-brother.png" alt="Canvas Logo"></a>
                         </div><!-- #logo end -->
 
                         <div id="primary-menu-trigger">
@@ -76,18 +76,26 @@
 
                             <ul class="menu-container not-dark one-page-menu" data-easing="easeInOutExpo"
                                 data-speed="1250" data-offset="160">
-                                <li class="menu-item"><a class="menu-link" href="#" data-href="#section-about">
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#" data-href="#section-about">
                                         <div>Tentang Kami</div>
-                                    </a></li>
-                                <li class="menu-item"><a class="menu-link" href="#" data-href="#section-speakers">
+                                    </a>
+                                </li>
+                                {{-- <li class="menu-item">
+                                    <a class="menu-link" href="#" data-href="#section-speakers">
                                         <div>Speakers</div>
-                                    </a></li>
-                                <li class="menu-item"><a class="menu-link" href="#" data-href="#section-schedule">
+                                    </a>
+                                </li> --}}
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#" data-href="#section-schedule">
                                         <div>Schedule</div>
-                                    </a></li>
-                                <li class="menu-item"><a class="menu-link" href="#" data-href="#section-tickets">
-                                        <div>Tickets</div>
-                                    </a></li>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#" data-href="#section-tickets">
+                                        <div>Price List</div>
+                                    </a>
+                                </li>
                                 <li class="menu-item"><a class="menu-link" href="#" data-href="#section-sponsors">
                                         <div>Sponsors</div>
                                     </a></li>
@@ -100,16 +108,7 @@
 
                         <!-- Primary Navigation
       ============================================= -->
-                        {{-- <nav class="primary-menu">
-
-                            <ul class="menu-container header-button">
-                                <li class="menu-item">
-                                    <a href="#section-tickets" class="button button-effect m-0"
-                                        data-scrollto="#section-tickets">Buy Tickets</a>
-                                </li>
-                            </ul>
-
-                        </nav><!-- #primary-menu end --> --}}
+                        <!-- #primary-menu end -->
 
                     </div>
                 </div>
@@ -128,18 +127,16 @@
                         <div class="row justify-content-between mt-5 col-mb-50">
                             <div class="col-lg-6 parallax" data-0="transform: translateY(0px); opacity: 1"
                                 data-300="transform: translateY(50px); opacity: 0">
-                                <span class="gradient-underline h3">SeLamat Datang di</span>
-                                <h2 class="font-weight-bold display-2 mb-0">My Brother Haircare.</h2>
+                                <span class="gradient-underline h4">Selamat Datang Di</span>
+                                <h2 class="font-weight-bold display-2 mb-0">My Brother Haircare</h2>
                             </div>
                             <div class="col-lg-6 d-flex align-items-lg-end flex-column parallax text-left text-lg-right mb-5 mb-lg-0"
                                 data-0="transform: translateY(0px)" data-700="transform: translateY(-50px)">
                                 <div class="mt-auto">
                                     <h2 class="mb-2 gradient-text">Buka Senin-Minggu</h2>
-                                    <h4 class="font-weight-normal">10.00 – 21.00 (Last order 20.30)
+                                    <h4 class="font-weight-normal">09.00 – 21.00<br>Jl. Kejayaan No.280, Kota Depok,
+                                        Jawa Barat 16417
                                     </h4>
-                                    {{-- <a href="#section-tickets"
-                                        class="button button-xxlarge button-white button-gradient m-0"
-                                        data-scrollto="#section-tickets">Get Tickets Now</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -161,8 +158,9 @@
                     <div class="container clearfix">
 
                         <div class="mb-5 dark">
-                            <span class="display-4 font-weight-bold gradient-underline font-primary">Tentang My Brother
-                                Haircare</span>
+                            <span class="display-4 font-weight-bold gradient-underline font-primary">
+                                Tentang My Brother Haircare
+                            </span>
                         </div>
 
                         <div class="clear"></div>
@@ -208,12 +206,12 @@
                             <div class="col-md-5">
                                 <div class="about-img position-relative">
                                     <div class="my-3 my-lg-0">
-                                        <div class="gradient-bg"><img src="/web/demos/conference/images/about/2.jpg"
-                                                alt="About Image"></div>
+                                        <div class="gradient-bg"><img src="/img/web/about1.jpeg" alt="About Image">
+                                        </div>
                                     </div>
                                     <div data-0="top: 160px" data-end="top: 120px">
-                                        <div class="gradient-bg"><img src="/web/demos/conference/images/about/1.jpg"
-                                                alt="About Image"></div>
+                                        <div class="gradient-bg"><img src="/img/web/about2.jpeg" alt="About Image">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -335,13 +333,14 @@
                             </a>
                         </div>
                     </div>
-                </div><!-- #section-speaker end --> --}}
+                </div> --}}
+                <!-- #section-speaker end -->
 
-                <div class="clear"></div>
+                {{-- <div class="clear"></div> --}}
 
                 <!-- Section Schedule
     ============================================= -->
-                {{-- <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
+                <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
                             <span class="display-4 font-weight-bold gradient-underline mb-0">Schedule</span>
@@ -534,14 +533,14 @@
                     </div>
                 </div><!-- #section-scedule end -->
 
-                <div class="clear"></div> --}}
+                <div class="clear"></div>
 
                 <!-- Section Tickets
     ============================================= -->
                 <div id="section-tickets" class="section page-section bg-transparent pt-0 clearfix">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
-                            <span class="display-4 font-weight-bold gradient-underline mb-0">Harga</span>
+                            <span class="display-4 font-weight-bold gradient-underline mb-0">Price List</span>
                         </div>
                     </div>
 
@@ -551,12 +550,10 @@
                         <div class="container">
                             <div class="row pricing align-items-center">
 
-                                <div class="col-lg-3 col-sm-6">
-                                    {{-- <div class="pricing-box disabled text-center"> --}}
+                                <div class="col-lg-1-5 col-sm-6">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Haircut and Grooming </h3>
-                                            {{-- <span>Valid until 28th Feb</span> --}}
+                                            <h3 class="nott ls0">Cukur Dewasa dan Cuci</h3>
                                         </div>
                                         <div class="pricing-price early-bird-pricing font-primary font-weight-bold">
                                             <span class="price-unit">&dollar;</span>50.000
@@ -564,110 +561,76 @@
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="early-bird-person"
                                                 id="early-bird-person">
-                                                <option value="1" selected>1 Orang</option>
-                                                {{-- <option value="2">2 Persons</option>
-                                                <option value="3">3 Persons</option>
-                                                <option value="4">4 Persons</option>
-                                                <option value="5">5 Persons</option>
-                                                <option value="6">6 Persons</option>
-                                                <option value="7">7 Persons</option>
-                                                <option value="8">8 Persons</option> --}}
+                                                <option value="1" selected>1 Person</option>
                                             </select>
                                         </div>
-                                        {{-- <div class="pricing-action px-5">
-                                            <a href="#"
-                                                class="button button-large button-gradient btn-block m-0">Buy
-                                                Ticket</a>
-                                        </div> --}}
                                     </div>
                                 </div>
 
-                                <div class="col-lg-3 col-sm-6 mt-4 mt-sm-0">
+                                <div class="col-lg-1-5 col-sm-6 mt-4 mt-sm-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Anak-Anak</h3>
-                                            {{-- <span class="nott">Valid until 19th March</span> --}}
+                                            <h3 class="nott ls0">Kids Haircut</h3>
                                         </div>
                                         <div class="pricing-price 1-day-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>35.000
+                                            <span class="price-unit">&dollar;</span>40.000
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="1-day-pricing-person"
                                                 id="1-day-pricing-person">
-                                                <option value="1" selected>1 Orang</option>
-                                                {{-- <option value="2">2 Persons</option>
-                                                <option value="3">3 Persons</option>
-                                                <option value="4">4 Persons</option>
-                                                <option value="5">5 Persons</option>
-                                                <option value="6">6 Persons</option>
-                                                <option value="7">7 Persons</option>
-                                                <option value="8">8 Persons</option> --}}
+                                                <option value="1" selected>1 Person</option>
                                             </select>
                                         </div>
-                                        {{-- <div class="pricing-action px-5">
-                                            <a href="#"
-                                                class="button button-large button-gradient btn-block m-0">Buy
-                                                Ticket</a>
-                                        </div> --}}
                                     </div>
                                 </div>
 
-                                <div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
+                                <div class="col-lg-1-5 col-sm-6 mt-4 mt-lg-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">2 Days Pass</h3>
-                                            <span class="nott">Valid until 17th March</span>
+                                            <h3 class="nott ls0">Jenggot</h3>
                                         </div>
                                         <div class="pricing-price 2-day-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>49
+                                            <span class="price-unit">&dollar;</span>25.000
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="2-day-pricing-person"
                                                 id="2-day-pricing-person">
                                                 <option value="1" selected>1 Person</option>
-                                                <option value="2">2 Persons</option>
-                                                <option value="3">3 Persons</option>
-                                                <option value="4">4 Persons</option>
-                                                <option value="5">5 Persons</option>
-                                                <option value="6">6 Persons</option>
-                                                <option value="7">7 Persons</option>
-                                                <option value="8">8 Persons</option>
                                             </select>
-                                        </div>
-                                        <div class="pricing-action px-5">
-                                            <a href="#"
-                                                class="button button-large button-gradient btn-block m-0">Buy
-                                                Ticket</a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
+                                <div class="col-lg-1-5 col-sm-6 mt-4 mt-lg-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Full Event</h3>
-                                            <span class="nott">Valid until 17th March</span>
+                                            <h3 class="nott ls0">Hair Colour</h3>
                                         </div>
                                         <div class="pricing-price full-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>69
+                                            <span class="price-unit">&dollar;</span>80.000
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="full-pricing-person"
                                                 id="full-pricing-person">
                                                 <option value="1" selected>1 Person</option>
-                                                <option value="2">2 Persons</option>
-                                                <option value="3">3 Persons</option>
-                                                <option value="4">4 Persons</option>
-                                                <option value="5">5 Persons</option>
-                                                <option value="6">6 Persons</option>
-                                                <option value="7">7 Persons</option>
-                                                <option value="8">8 Persons</option>
                                             </select>
                                         </div>
-                                        <div class="pricing-action px-5">
-                                            <a href="#"
-                                                class="button button-large button-gradient btn-block m-0">Buy
-                                                Ticket</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-1-5 col-sm-6 mt-4 mt-lg-0">
+                                    <div class="pricing-box text-center">
+                                        <div class="pricing-title title-sm">
+                                            <h3 class="nott ls0">Hair SPA</h3>
+                                        </div>
+                                        <div class="pricing-price full-pricing font-primary font-weight-bold">
+                                            <span class="price-unit">&dollar;</span>60.000
+                                        </div>
+                                        <div class="pricing-persons">
+                                            <select class="required custom-select" name="full-pricing-person"
+                                                id="full-pricing-person">
+                                                <option value="1" selected>1 Person</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -784,7 +747,7 @@
                     style=" overflow: visible">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
-                            <span class="display-4 font-weight-bold gradient-underline mb-0">Venue</span>
+                            <span class="display-4 font-weight-bold gradient-underline mb-0">Locations</span>
                         </div>
 
                     </div>
@@ -975,10 +938,10 @@
                             <div class="widget clearfix">
                                 <div class="row clearfix">
                                     <div class="col-lg-8 bottommargin-sm clearfix" style="color:#888;">
-                                        <img src="/img/web/my-brother.png" alt="Canvas Logo" style="display: block;"
-                                            height="100">
-                                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, consequatur
-                                            facere molestiae iusto atque.</p> --}}
+                                        <img src="/web/demos/app-landing/images/logo-dark@2x.png" alt="Canvas Logo"
+                                            style="display: block;" height="100">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, consequatur
+                                            facere molestiae iusto atque.</p>
 
                                         <a href="#"
                                             class="social-icon si-small si-borderless si-colored si-rounded si-facebook">
@@ -1024,6 +987,10 @@
                                         <ul class="pt-3">
                                             <li><a href="">Visiting Place</a></li>
                                             <li><a href="">Nearby Hotels</a></li>
+                                            <li><a href="">Public Transports</a></li>
+                                            <li><a href="">Weather Info</a></li>
+                                            <li><a href="">Food Cost</a></li>
+                                            <li><a href="">Accommodation </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1032,6 +999,9 @@
                                         <ul class="pt-3">
                                             <li><a href="">Code Of Conduct</a></li>
                                             <li><a href="">Speakers</a></li>
+                                            <li><a href="">Sponsors</a></li>
+                                            <li><a href="">FAQs</a></li>
+                                            <li><a href="">Volunteers</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1063,7 +1033,9 @@
                 <div class="container clearfix">
 
                     <div class="w-100 text-center text-md-left">
-                        Copyrights &copy; 2023 All Rights Reserved by My Brother.<br>
+                        Copyrights &copy; 2021 All Rights Reserved by Canvas Inc.<br>
+                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy
+                                Policy</a></div>
                     </div>
 
                 </div>
