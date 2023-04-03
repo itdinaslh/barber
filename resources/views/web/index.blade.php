@@ -51,11 +51,11 @@
       ============================================= -->
                         <div id="logo" class="mr-lg-0">
                             <a href="#" data-scrollto="#slider" class="standard-logo"
-                                data-dark-logo="/web/demos/conference/images/logo-dark.png">
-                                <img src="/web/demos/conference/images/logo.png" alt="Canvas Logo"></a>
+                                data-dark-logo="/image/my-brother.png">
+                                <img src="/image/my-brother.png" alt="Canvas Logo"></a>
                             <a href="#" data-scrollto="#slider" class="retina-logo"
-                                data-dark-logo="/web/demos/conference/images/logo-dark@2x.png">
-                                <img src="/web/demos/conference/images/logo@2x.png" alt="Canvas Logo"></a>
+                                data-dark-logo="/image/my-brother.png">
+                                <img src="/image/my-brother.png" alt="Canvas Logo"></a>
                         </div><!-- #logo end -->
 
                         <div id="primary-menu-trigger">
@@ -77,7 +77,7 @@
                             <ul class="menu-container not-dark one-page-menu" data-easing="easeInOutExpo"
                                 data-speed="1250" data-offset="160">
                                 <li class="menu-item"><a class="menu-link" href="#" data-href="#section-about">
-                                        <div>About</div>
+                                        <div>Tentang Kami</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="#" data-href="#section-speakers">
                                         <div>Speakers</div>
@@ -100,7 +100,7 @@
 
                         <!-- Primary Navigation
       ============================================= -->
-                        <nav class="primary-menu">
+                        {{-- <nav class="primary-menu">
 
                             <ul class="menu-container header-button">
                                 <li class="menu-item">
@@ -109,7 +109,7 @@
                                 </li>
                             </ul>
 
-                        </nav><!-- #primary-menu end -->
+                        </nav><!-- #primary-menu end --> --}}
 
                     </div>
                 </div>
@@ -128,18 +128,18 @@
                         <div class="row justify-content-between mt-5 col-mb-50">
                             <div class="col-lg-6 parallax" data-0="transform: translateY(0px); opacity: 1"
                                 data-300="transform: translateY(50px); opacity: 0">
-                                {{-- <span class="gradient-underline h4">SemiColonWeb 2021</span> --}}
+                                <span class="gradient-underline h3">SeLamat Datang di</span>
                                 <h2 class="font-weight-bold display-2 mb-0">My Brother Haircare.</h2>
                             </div>
                             <div class="col-lg-6 d-flex align-items-lg-end flex-column parallax text-left text-lg-right mb-5 mb-lg-0"
                                 data-0="transform: translateY(0px)" data-700="transform: translateY(-50px)">
                                 <div class="mt-auto">
-                                    <h2 class="mb-2 gradient-text">March 17-19, 2021</h2>
-                                    <h4 class="font-weight-normal">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107
+                                    <h2 class="mb-2 gradient-text">Buka Senin-Minggu</h2>
+                                    <h4 class="font-weight-normal">10.00 – 21.00 (Last order 20.30)
                                     </h4>
-                                    <a href="#section-tickets"
+                                    {{-- <a href="#section-tickets"
                                         class="button button-xxlarge button-white button-gradient m-0"
-                                        data-scrollto="#section-tickets">Get Tickets Now</a>
+                                        data-scrollto="#section-tickets">Get Tickets Now</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -161,8 +161,8 @@
                     <div class="container clearfix">
 
                         <div class="mb-5 dark">
-                            <span class="display-4 font-weight-bold gradient-underline font-primary">About The
-                                Conference</span>
+                            <span class="display-4 font-weight-bold gradient-underline font-primary">Temtang My Brother
+                                Haircare</span>
                         </div>
 
                         <div class="clear"></div>
@@ -227,7 +227,7 @@
 
                 <!-- Section Speakers
     ============================================= -->
-                <div id="section-speakers" class="section page-section bg-transparent pt-0 topmargin-lg clearfix">
+                {{-- <div id="section-speakers" class="section page-section bg-transparent pt-0 topmargin-lg clearfix">
                     <div class="container">
                         <div class="mb-5 dark d-flex flex-wrap justify-content-between align-items-center">
                             <span class="display-4 font-weight-bold gradient-underline mb-0">Speakers</span>
@@ -335,13 +335,13 @@
                             </a>
                         </div>
                     </div>
-                </div><!-- #section-speaker end -->
+                </div><!-- #section-speaker end --> --}}
 
                 <div class="clear"></div>
 
                 <!-- Section Schedule
     ============================================= -->
-                <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
+                {{-- <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
                             <span class="display-4 font-weight-bold gradient-underline mb-0">Schedule</span>
@@ -534,14 +534,14 @@
                     </div>
                 </div><!-- #section-scedule end -->
 
-                <div class="clear"></div>
+                <div class="clear"></div> --}}
 
                 <!-- Section Tickets
     ============================================= -->
                 <div id="section-tickets" class="section page-section bg-transparent pt-0 clearfix">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
-                            <span class="display-4 font-weight-bold gradient-underline mb-0">Tickets</span>
+                            <span class="display-4 font-weight-bold gradient-underline mb-0">Harga</span>
                         </div>
                     </div>
 
@@ -554,11 +554,11 @@
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="pricing-box disabled text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Early Bird(Full Event)</h3>
-                                            <span>Valid until 28th Feb</span>
+                                            <h3 class="nott ls0">Haircut and Grooming </h3>
+                                            {{-- <span>Valid until 28th Feb</span> --}}
                                         </div>
                                         <div class="pricing-price early-bird-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>39
+                                            <span class="price-unit">&dollar;</span>50.000
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="early-bird-person"
