@@ -29,7 +29,7 @@
 
     <!-- Document Title
  ============================================= -->
-    <title>My Brother | Canvas</title>
+    <title>My Brother | Haircare</title>
 
 </head>
 
@@ -120,7 +120,7 @@
         <!-- Hero/Slider
   ============================================= -->
         <section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header"
-            style="background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.8)), url('/web/demos/conference/images/hero-2.jpg') no-repeat center center / cover;">
+            style="background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.8)), url('/img/web/background.jpeg') no-repeat center center / cover;">
             <div class="slider-inner">
 
                 <div class="vertical-middle">
@@ -128,8 +128,8 @@
                         <div class="row justify-content-between mt-5 col-mb-50">
                             <div class="col-lg-6 parallax" data-0="transform: translateY(0px); opacity: 1"
                                 data-300="transform: translateY(50px); opacity: 0">
-                                <span class="gradient-underline h4">SemiColonWeb 2021</span>
-                                <h2 class="font-weight-bold display-2 mb-0">Canvas Development Conference.</h2>
+                                {{-- <span class="gradient-underline h4">SemiColonWeb 2021</span> --}}
+                                <h2 class="font-weight-bold display-2 mb-0">My Brother Haircare.</h2>
                             </div>
                             <div class="col-lg-6 d-flex align-items-lg-end flex-column parallax text-left text-lg-right mb-5 mb-lg-0"
                                 data-0="transform: translateY(0px)" data-700="transform: translateY(-50px)">
