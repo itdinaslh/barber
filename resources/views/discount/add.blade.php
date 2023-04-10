@@ -3,25 +3,39 @@
     <input type="hidden" name="uid" value="{{ Auth::user()->id }}" />
     <input type="hidden" name="rPrice" id="rPrice" />
     <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                class="sr-only">Close</span></button>
         <h4 class="modal-title">Tambah Discounts Card</h4>
     </div>
     <div class="modal-body">
         <div class="form-group">
             <label for="Nama">DiscountID</label>
-            <input type="text" id="DiscountID" class="form-control" name="DiscountID" value="{{ $next }}" autocomplete="off" maxLength="9" required  />
+            <input type="text" id="DiscountID" class="form-control" name="DiscountID" value="{{ $next }}"
+                autocomplete="off" maxLength="9" required />
         </div>
         <div class="form-group">
             <label for="Phone">Harga Discount</label>
-            <input id="Price" type="text" class="form-control" name="Price" autocomplete="off" required autofocus />
+            <input id="Price" type="text" class="form-control" name="Price" autocomplete="off" required
+                autofocus />
+        </div>
+        <div class="form-group">
+            <label for="Phone">Tanggal Mulai Diskon</label>
+            <input id="Price" type="date" class="form-control" name="Price" autocomplete="off" required
+                autofocus />
+        </div>
+        <div class="form-group">
+            <label for="Phone">Tanggal Akhir Diskon</label>
+            <input id="Price" type="date" class="form-control" name="Price" autocomplete="off" required
+                autofocus />
         </div>
         <div class="form-group">
             <label for="Occupation">Tanggal Kadaluarsa</label>
             <div class="input-group">
                 <div class="input-group-addon">
-                  <i class="fa fa-calendar"></i>
+                    <i class="fa fa-calendar"></i>
                 </div>
-                <input id="datemask" type="text" class="form-control" autocomplete="off" data-inputmask="'alias': 'dd/mm/yyyy'" name="ValidUntil" required data-mask>
+                <input id="datemask" type="text" class="form-control" autocomplete="off"
+                    data-inputmask="'alias': 'dd/mm/yyyy'" name="ValidUntil" required data-mask>
             </div>
         </div>
         <div class="form-group">
@@ -33,7 +47,7 @@
         </div>
         <div class="form-group">
             <label for="">Note</label>
-            <input type="text" name="Note" class="form-control"  />
+            <input type="text" name="Note" class="form-control" />
         </div>
     </div>
     <div class="modal-footer">

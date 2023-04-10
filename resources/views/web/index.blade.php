@@ -86,18 +86,18 @@
                                         <div>Speakers</div>
                                     </a>
                                 </li> --}}
-                                <li class="menu-item">
+                                {{-- <li class="menu-item">
                                     <a class="menu-link" href="#" data-href="#section-schedule">
                                         <div>Schedule</div>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="menu-item">
                                     <a class="menu-link" href="#" data-href="#section-tickets">
                                         <div>Price List</div>
                                     </a>
                                 </li>
                                 <li class="menu-item"><a class="menu-link" href="#" data-href="#section-sponsors">
-                                        <div>Sponsors</div>
+                                        <div>Promo</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="#" data-href="#section-location">
                                         <div>Location</div>
@@ -340,7 +340,7 @@
 
                 <!-- Section Schedule
     ============================================= -->
-                <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
+                {{-- <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
                             <span class="display-4 font-weight-bold gradient-underline mb-0">Schedule</span>
@@ -531,11 +531,12 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- #section-scedule end -->
+                </div> --}}
+                <!-- #section-scedule end -->
 
-                <div class="clear"></div>
+                {{-- <div class="clear"></div> --}}
 
-                <!-- Section Tickets
+                <!-- Section Prices
     ============================================= -->
                 <div id="section-tickets" class="section page-section bg-transparent pt-0 clearfix">
                     <div class="container">
@@ -553,7 +554,9 @@
                                 <div class="col-lg-1-5 col-sm-6">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Cukur Dewasa dan Cuci</h3>
+                                            <a
+                                                class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
+                                                Cukur Dewasa dan Cuci</a>
                                         </div>
                                         <div class="pricing-price early-bird-pricing font-primary font-weight-bold">
                                             <span class="price-unit">&dollar;</span>50.000
@@ -570,7 +573,9 @@
                                 <div class="col-lg-1-5 col-sm-6 mt-4 mt-sm-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Kids Haircut</h3>
+                                            <a
+                                                class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
+                                                Kids Haircut</a>
                                         </div>
                                         <div class="pricing-price 1-day-pricing font-primary font-weight-bold">
                                             <span class="price-unit">&dollar;</span>40.000
@@ -587,10 +592,12 @@
                                 <div class="col-lg-1-5 col-sm-6 mt-4 mt-lg-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Jenggot</h3>
+                                            <a
+                                                class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
+                                                Jenggot</a>
                                         </div>
                                         <div class="pricing-price 2-day-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>25.000
+                                            <span class="price-unit">&#8360;</span>25.000
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="2-day-pricing-person"
@@ -604,7 +611,9 @@
                                 <div class="col-lg-1-5 col-sm-6 mt-4 mt-lg-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Hair Colour</h3>
+                                            <a
+                                                class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
+                                                Hair Colour</a>
                                         </div>
                                         <div class="pricing-price full-pricing font-primary font-weight-bold">
                                             <span class="price-unit">&dollar;</span>80.000
@@ -621,7 +630,9 @@
                                 <div class="col-lg-1-5 col-sm-6 mt-4 mt-lg-0">
                                     <div class="pricing-box text-center">
                                         <div class="pricing-title title-sm">
-                                            <h3 class="nott ls0">Hair SPA</h3>
+                                            <a
+                                                class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
+                                                Hair SPA</a>
                                         </div>
                                         <div class="pricing-price full-pricing font-primary font-weight-bold">
                                             <span class="price-unit">&dollar;</span>60.000
@@ -654,7 +665,8 @@
                                 Us</a>
                         </div>
                     </div>
-                </div><!-- #section-tickets end -->
+                </div>
+                <!-- #section-prices end -->
 
                 <div class="clear"></div>
 
@@ -663,7 +675,7 @@
                 <div id="section-sponsors" class="section page-section bg-transparent pt-0 topmargin-lg clearfix">
                     <div class="container">
                         <div class="mb-5 dark d-flex justify-content-between align-items-center">
-                            <span class="display-4 font-weight-bold gradient-underline mb-0">Sponsors</span>
+                            <span class="display-4 font-weight-bold gradient-underline mb-0">Promos</span>
                         </div>
 
                         <div class="mx-auto schedule-wrap center dark rounded shadow-lg"
@@ -737,7 +749,8 @@
                     <div class="dotted-bg"
                         style="background: url('/web/demos/conference/images/dotted-bg.svg') repeat center center / contain; min-height: 25%; top: 90%; right: 0; left: auto; width: 50%">
                     </div>
-                </div><!-- #section-Sponsors end -->
+                </div>
+                <!-- #section-Sponsors end -->
 
                 <div class="clear"></div>
 
@@ -808,7 +821,8 @@
                                     </div>
                                     <div class="col-md-3 mb-4">
                                         <h3 class="gradient-underline d-inline-flex mb-5">Our Address</h3>
-                                        <h4 class="font-weight-normal">795 Folsom Ave, Suite 600<br>San Francisco, CA
+                                        <h4 class="font-weight-normal">Jl. Kejayaan No.280, Kota Depok, Jawa Barat
+                                            16417<br>San Francisco, CA
                                             94107</h4>
                                         <h4 class="mb-2"> +111-222-33-44</h4>
                                         <h4 class="mb-2">+222-333-44-55</h4>
