@@ -29,19 +29,21 @@ use App\Http\Controllers\ReportController;
 |
 */
 
-Route::get('/test', function () {
+Route::get('/', function () {
     return view('web.index');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/home', function () {
+    return redirect('/dashboard');
+});
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/', [DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 
     // Product routes
     Route::get('/master/products', [ProductController::class, 'index']);
-    Route::get('/', [DashboardController::class, 'index']);
 
     // Product routes
     Route::get('/master/products', [ProductController::class, 'index']);

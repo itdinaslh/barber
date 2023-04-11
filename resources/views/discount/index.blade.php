@@ -4,6 +4,7 @@
 @section('PageHeader', 'Master Data Discounts')
 @push('styles')
     <link rel="stylesheet" href="{{ asset('/admin/plugins/datatables/datatables.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/admin/plugins/datepicker/datepicker3.css') }}" />
     <link rel="stylesheet" href="{{ asset('/admin/plugins/sweetalert2/sweetalert2.min.css') }}" />
 @endpush
 
@@ -39,8 +40,8 @@
         </div>
         <div class="col-xs-12">
             <div class="text-right">
-                <button type="button" name="btnMultiple" class="btn btn-warning showMe"
-                    data-href="{{ url('/discounts/multiple') }}">Add Multiple</button>
+                {{-- <button type="button" name="btnMultiple" class="btn btn-warning showMe"
+                    data-href="{{ url('/discounts/multiple') }}">Add Multiple</button> --}}
                 <button type="button" name="btnAdd" class="btn btn-primary showMe"
                     data-href="{{ url('/discounts/add') }}">Add New</button>
             </div>
@@ -50,9 +51,7 @@
 
 @push('scripts')
     <script src="{{ asset('/admin/plugins/datatables/datatables.min.js') }}"></script>
-    <script src="{{ asset('/admin/plugins/input-mask/jquery.inputmask.js') }}"></script>
-    <script src="{{ asset('/admin/plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
-    <script src="{{ asset('/admin/plugins/input-mask/jquery.inputmask.extensions.js') }}"></script>
+    <script src="{{ asset('/admin/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
     <script src="{{ asset('/admin/plugins/autonumeric/autoNumeric.min.js') }}"></script>
     <script src="{{ asset('/admin/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('/js/pages/discount/modalDisc.js') }}"></script>

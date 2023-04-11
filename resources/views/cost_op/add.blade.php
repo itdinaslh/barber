@@ -27,7 +27,8 @@
         </div>
         <div class="form-group">
             <label for="Nama">Qty</label>
-            <input type="text" id="Qty" class="form-control" name="Qty" autocomplete="off" required />
+            <input type="text" id="Qty" class="form-control" name="Qty" autocomplete="off" required
+                value="1" />
         </div>
 
         <div class="form-group">
