@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserApiController;
 use App\Http\Controllers\BarberApiController;
+use App\Http\Controllers\TransApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,11 +24,14 @@ Route::get('/test', function() {
 });
 
 Route::get('/barberman', [BarberApiController::class, 'index']);
+Route::get('/transaction/today', [TransApiCOntroller::class, 'today']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::middleware('auth:sanctum')->group(function() {
+    Route::get('/user', [UserApiController::class, 'index']);
+
     Route::post('/logout', [UserApiController::class, 'logout']);
 });

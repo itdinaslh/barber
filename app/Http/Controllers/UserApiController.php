@@ -15,7 +15,11 @@ class UserApiController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::where('id', Auth::user()->id)
+            ->select('id', 'username', 'name', 'posid')
+            ->first();
+
+        return $user;
     }
 
     public function login(Request $request) {
