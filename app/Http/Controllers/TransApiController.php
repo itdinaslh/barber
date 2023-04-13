@@ -13,8 +13,8 @@ class TransApiController extends Controller
 
         $now = date('Y-m-d');
 
-        $awal = '2023-03-01 00:00:00';
-        $akhir = '2023-03-30 23:59:59';
+        $awal = $now.' 00:00:00';
+        $akhir = $now.' 23:59:59';
 
         $trans = DB::table('transactions as t')
             ->select(
@@ -23,6 +23,7 @@ class TransApiController extends Controller
             )
             ->where('t.Lock', 1)
             ->whereBetween('t.created_at', [$awal, $akhir])
+            ->orderBy('t.id', 'desc')
             ->get();
 
         if (!is_null($trans)) {
