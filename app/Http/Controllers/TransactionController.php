@@ -34,7 +34,7 @@ class TransactionController extends Controller
                   ->leftJoin('transactions as t', 'c.id', '=', 't.MemberID')
                   ->select('c.id', DB::raw($id.' as userid'), 'c.Nama', 'c.Phone',
                             DB::raw("date_format(c.LastVisit, '%d-%b-%Y %T') as LastVisit"), DB::raw('count(t.id) as TotalVisit'))
-                  ->groupBy('c.id', 'c.Nama');
+                  ->groupBy('c.id', 'c.Nama', 'c.Phone');
 
         return DataTables::of($data)
                          ->addColumn('action', function($data) {
