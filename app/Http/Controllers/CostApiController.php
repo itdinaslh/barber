@@ -23,6 +23,7 @@ class CostApiController extends Controller
                 DB::raw("DATE_FORMAT(co.created_at, '%H:%i:%s') as Time")
             )
             ->whereBetween('co.Tanggal', [$firstDate, $lastDate])
+            ->orderBy('co.id', 'desc')
             ->get();
 
         if (!is_null($data)) {
