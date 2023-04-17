@@ -34,7 +34,7 @@ class TransactionController extends Controller
                   ->leftJoin('transactions as t', 'c.id', '=', 't.MemberID')
                   ->select('c.id', DB::raw($id.' as userid'), 'c.Nama', 'c.Phone',
                             DB::raw("date_format(c.LastVisit, '%d-%b-%Y %T') as LastVisit"), DB::raw('count(t.id) as TotalVisit'))
-                  ->groupBy('c.id', 'c.Nama');
+                  ->groupBy('c.id', 'c.Nama', 'c.Phone', 'c.LastVisit');
 
         return DataTables::of($data)
                          ->addColumn('action', function($data) {
@@ -137,12 +137,35 @@ class TransactionController extends Controller
     }
 
     public function addBbDetail(Request $req) {
+        $today = Carbon::now()->format('Y-m-d');
         $bbserv = DB::table('bbserv as b')
                     ->join('service as s', 'b.ServiceID', '=', 's.id')
-                    ->select('b.id', 'b.Harga', 'b.Fee', 's.ServiceName')
+                    ->select('b.id', 's.Harga', 'b.Fee', 's.ServiceName')
                     ->where('ServiceID', $req->ServiceID)
                     ->where('BbID', $req->BbID)
                     ->first();
+        $d = DB::table('discounts')
+                ->select('id', 'Price', 'ValidUntil', 'IsValid','IsPrice')
+                ->where('IsValid', 1)
+                ->where('ValidUntil', '>=', $today)
+                ->first();
+
+        if(isset($d)) {
+            if($d->IsPrice == 1 ){
+                $total = (($bbserv->Harga - $d->Price) * $req->Qty);
+                $disc = $d->Price;
+                $totald = ($d->Price * $req->Qty);
+            } else {
+                $disc = $d->Price * $bbserv->Harga / 100;
+                $totald = ($d->Price * $req->Qty * $bbserv->Harga / 100);
+                $total = ($bbserv->Harga * $req->Qty) -$totald;
+            }
+        } else {
+            $total =  ($bbserv->Harga * $req->Qty);
+            $totald = null;
+            $disc = null;
+        }
+
 
         $data = new Transbbdetail;
 
@@ -152,7 +175,10 @@ class TransactionController extends Controller
         $data->Price = $bbserv->Harga;
         $data->BbID = $req->BbID;
         $data->Qty = $req->Qty;
-        $data->Total = ($bbserv->Harga * $req->Qty);
+        $data->Diskon = $disc;
+        $data->TotalPrice = ($bbserv->Harga * $req->Qty);
+        $data->TotalDiskon = $totald;
+        $data->Total = $total;
         $data->Fee = $bbserv->Fee;
 
         $data->save();
@@ -320,7 +346,7 @@ class TransactionController extends Controller
                   ->join('customer as c', 't.MemberID', '=', 'c.id')
                   ->Join('transbbdetails as t1', 't.id', '=', 't1.TrxID')
                   ->where('t.id', $id)
-                  ->groupBy('t1.TrxID')
+                  ->groupBy('t1.TrxID','t.id', 'c.Nama')
                   ->select(['t.id', 'c.Nama', DB::raw('sum(t1.Price * t1.Qty) as Total')])
                   ->first();
 
@@ -329,6 +355,13 @@ class TransactionController extends Controller
                   ->join('product as c', 'b.ProductID', '=', 'c.id')
                   ->select(DB::raw('sum(b.Price * b.Qty) as Total'))
                   ->where('a.id', $id)
+                  ->first();
+        $diskon = DB::table('transactions as t')
+                  ->join('customer as c', 't.MemberID', '=', 'c.id')
+                  ->Join('transbbdetails as t1', 't.id', '=', 't1.TrxID')
+                  ->where('t.id', $id)
+                  ->groupBy('t1.TrxID','t.id', 'c.Nama')
+                  ->select(['t.id', 'c.Nama', DB::raw('sum(t1.Diskon * t1.Qty) as Total')])
                   ->first();
 
         $TotalService = 0;
@@ -341,14 +374,36 @@ class TransactionController extends Controller
 
         $TotalString = number_format($Total, 0, ',', '.');
 
+        if(isset($data->Total)) {
+            $TotalService = $data->Total;
+        }
+
+        $DiskonAll = 0;
+
+        if(isset($diskon->Total)) {
+            $DiskonAll = $diskon->Total;
+        }
+
+        $diskonS = number_format($DiskonAll, 0, ',', '.');
+
+        $TotalP = $Total - $DiskonAll;
+        $TotalPstring = number_format($TotalP, 0, ',', '.');
 
         // return $Total;
-        return view('transaction.checkout', ['trans' => $trans, 'payment' => $payment, 'TotalHid' => $Total, 'TotalString' => $TotalString]);
+        return view('transaction.checkout',
+            ['trans' => $trans,
+            'payment' => $payment,
+            'TotalHid' => $Total,
+            'TotalString' => $TotalString,
+            'DiskonAll' => $DiskonAll,
+            'diskonS' => $diskonS,
+            'TotalP' => $TotalP,
+            'TotalPstring' => $TotalPstring ]);
     }
 
     public function FinalizeCheckout(Request $req) {
         date_default_timezone_set('Asia/Jakarta');
-
+        $today = Carbon::now()->format('Y-m-d');
         $now = Carbon::now();
         $pid = $req->PaymentID;
 
@@ -365,36 +420,47 @@ class TransactionController extends Controller
             $data->CardID = $req->CardID;
         }
         $data->PayVal = $payval;
+        $d = DB::table('discounts')
+                ->select('DiscountID')
+                ->where('IsValid', 1)
+                ->where('ValidUntil', '>=', $today)
+                ->first();
 
-        if(!is_null($req->rDisc) || $req->rDisc != '') {
-            $d = DB::table('discounts')
-                    ->select('id', 'Price', 'ValidUntil', 'IsValid')
-                    ->where('DiscountID', $req->DiscountID)
-                    ->first();
-
-            if(isset($d)) {
-                if ($d->IsValid == 0 || $now > $d->ValidUntil) {
-                    return ['discountinvalid' => true];
-                } else {
-                    $disc = $d->Price;
-                    $data->DiscountID = $req->DiscountID;
-                    $data->Discount = $disc;
-
-                    $dupd = Discount::findOrFail($d->id);
-
-                    $dupd->IsValid = 0;
-
-                    $dupd->save();
-                }
-            } else {
-                $disc = null;
-            }
-
-            $paid = $req->totalhid - $disc;
-        } else {
-            $disc = null;
-            $paid = $req->totalhid;
+        if(isset($d)) {
+            $data->DiscountID = $d->DiscountID;
         }
+        $data->Discount = $req->rDiskon;
+        $paid = $req->totalhid - $req->rDiskon;
+
+        // if(!is_null($req->rDisc) || $req->rDisc != '') {
+        //     $d = DB::table('discounts')
+        //             ->select('id', 'Price', 'ValidUntil', 'IsValid')
+        //             ->where('DiscountID', $req->DiscountID)
+        //             ->first();
+
+        //     if(isset($d)) {
+        //         if ($d->IsValid == 0 || $now > $d->ValidUntil) {
+        //             return ['discountinvalid' => true];
+        //         } else {
+        //             $disc = $d->Price;
+        //             $data->DiscountID = $req->DiscountID;
+        //             $data->Discount = $disc;
+
+        //             $dupd = Discount::findOrFail($d->id);
+
+        //             $dupd->IsValid = 0;
+
+        //             $dupd->save();
+        //         }
+        //     } else {
+        //         $disc = null;
+        //     }
+
+        //     $paid = $req->totalhid - $disc;
+        // } else {
+        //     $disc = null;
+        //     $paid = $req->totalhid;
+        // }
 
         if($req->VoucherID != ''){
             if(!is_null($req->rVoucher) || $req->rVoucher != '' ) {
@@ -557,7 +623,7 @@ class TransactionController extends Controller
 
         return DataTables::of($data)
                          ->addColumn('action', function($data) {
-                              return '<a href="/transaction/printpreview-'.$data->id.'" class="btn btn-warning" target="_blank"
+                              return '<a href="/transaction/struk/'.$data->id.'" class="btn btn-warning" target="_blank"
                                       style="width:100%;">Print Struk</a>';
                          })
                          ->make(true);

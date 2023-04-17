@@ -15,7 +15,7 @@ $(document).ready(function () {
     function bindForm(dialog) {
       $('#formCheckout', dialog).submit(function (e) {
         e.preventDefault();
-        var total = $('#rTotal').val();
+        var total = $('#pTotal').val();
         var i = $('#PayVal').autoNumeric('get');
         var paid = parseInt(i);
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
 
   function Checkout(id) {
     swal("Sukses!", "Transaksi Berhasil", "success").then(function() {
-        var win = window.open('/transaction/printpreview-'+id, '_blank');
+        var win = window.open('/transaction/struk/'+id, '_blank');
 
         if (win) {
             win.focus();

@@ -1,7 +1,9 @@
 $(document).on('shown.bs.modal', '.modal', function() {
     $(this).find('[autofocus]').focus();
-    $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-    $("[data-mask]").inputmask();
+    $('.tgl').datepicker({
+        autoclose: true,
+        format: 'yyyy-mm-dd'
+    });
     $('#Price').autoNumeric('init', { currencySymbol:'', allowDecimalPadding: false, digitGroupSeparator:'.', decimalCharacter: ','});
     $('#PriceBulk').autoNumeric('init', { currencySymbol:'', allowDecimalPadding: false, digitGroupSeparator:'.', decimalCharacter: ','});
 });
@@ -14,10 +16,10 @@ $('#discounts').dataTable({
     ajax: '/discounts/ajaxdata',
     columns: [
         {data:'DiscountID', name:'DiscountID'},
+        {data:'IsPrice', name:'IsPrice'},
         {data:'fPrice', name:'fPrice'},
         {data:'fValidUntil', name:'fValidUntil'},
         {data:'IsValid', name:'IsValid'},
-        {data:'Note', name:'Note'},
         {data:'action', name:'action', searchable:false, orderable: false}
     ]
 });

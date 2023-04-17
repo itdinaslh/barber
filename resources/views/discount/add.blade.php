@@ -9,34 +9,25 @@
     </div>
     <div class="modal-body">
         <div class="form-group">
-            <label for="Nama">DiscountID</label>
-            <input type="text" id="DiscountID" class="form-control" name="DiscountID" value="{{ $next }}"
-                autocomplete="off" maxLength="9" required />
+            <label for="Nama">DiskonID</label>
+            <input type="text" id="DiscountID" class="form-control" autocomplete="off" name="DiscountID"
+                value="{{ $next }}" maxLength="9" readonly />
         </div>
         <div class="form-group">
-            <label for="Phone">Harga Discount</label>
-            <input id="Price" type="text" class="form-control" name="Price" autocomplete="off" required
-                autofocus />
+            <label for="IdNum">Jenis</label>
+            <select class="form-control" name="IsPrice">
+                <option value="0">Persen</option>
+                <option value="1" selected>Harga</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="Phone">Tanggal Mulai Diskon</label>
-            <input id="Price" type="date" class="form-control" name="Price" autocomplete="off" required
-                autofocus />
+            <label for="Phone">Harga / Persen Discount</label>
+            <input id="Price" type="text" class="form-control" name="Price" autocomplete="off" required />
         </div>
         <div class="form-group">
             <label for="Phone">Tanggal Akhir Diskon</label>
-            <input id="Price" type="date" class="form-control" name="Price" autocomplete="off" required
-                autofocus />
-        </div>
-        <div class="form-group">
-            <label for="Occupation">Tanggal Kadaluarsa</label>
-            <div class="input-group">
-                <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                </div>
-                <input id="datemask" type="text" class="form-control" autocomplete="off"
-                    data-inputmask="'alias': 'dd/mm/yyyy'" name="ValidUntil" required data-mask>
-            </div>
+            <input id="date" type="text" class="form-control tgl" name="ValidUntil" autocomplete="off"
+                required />
         </div>
         <div class="form-group">
             <label for="IdNum">Valid</label>

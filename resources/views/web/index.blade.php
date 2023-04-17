@@ -105,6 +105,14 @@
                             </ul>
 
                         </nav><!-- #primary-menu end -->
+                        <nav class="primary-menu">
+                            <ul class="menu-container header-button">
+                                <li class="menu-item">
+                                    <a href="/login"
+                                        class="button ls-1 text-uppercase fw-semibold button-effect m-0">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
 
                         <!-- Primary Navigation
       ============================================= -->
@@ -223,318 +231,6 @@
 
                 <div class="clear"></div>
 
-                <!-- Section Speakers
-    ============================================= -->
-                {{-- <div id="section-speakers" class="section page-section bg-transparent pt-0 topmargin-lg clearfix">
-                    <div class="container">
-                        <div class="mb-5 dark d-flex flex-wrap justify-content-between align-items-center">
-                            <span class="display-4 font-weight-bold gradient-underline mb-0">Speakers</span>
-                            <a href="#" class="button button-effect m-0">Show All Speakers</a>
-                        </div>
-                        <div class="card-columns mx-auto dark" style="max-width: 1000px;">
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/1.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Gunther Beard</h4><span>Software Designer</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/2.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Desmond Eagle </h4><span>Canvas Business</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/3.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Will Barrow</h4><span>Cloud Management</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/4.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Pelican Steve</h4><span>Community</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/5.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Gunther Beard</h4><span>Software Designer</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/6.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Desmond Eagle </h4><span>Canvas Business</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/7.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Will Barrow</h4><span>Cloud Management</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team">
-                                <div class="team-image">
-                                    <img src="/web/demos/conference/images/speakers/8.jpg" alt="John Doe">
-                                </div>
-                                <div class="team-desc">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Piff Jenkins</h4><span>Community</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#" class="team joinspeaker ">
-                                <div class="team-image gradient-bg">
-                                    <img src="/web/demos/conference/images/speakers/blank.jpg" alt="John Doe">
-                                    <i class="icon-line-circle-plus gradient-text"></i>
-                                </div>
-                                <div class="team-desc" style="z-index: 3;">
-                                    <div class="team-title">
-                                        <h4 class="gradient-text">Join as a Speaker</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div> --}}
-                <!-- #section-speaker end -->
-
-                {{-- <div class="clear"></div> --}}
-
-                <!-- Section Schedule
-    ============================================= -->
-                {{-- <div id="section-schedule" class="section page-section bg-transparent pt-0 topmargin-lg clearix">
-                    <div class="container">
-                        <div class="mb-5 dark d-flex justify-content-between align-items-center">
-                            <span class="display-4 font-weight-bold gradient-underline mb-0">Schedule</span>
-                        </div>
-
-                        <div class="schedule-wrap mx-auto rounded" style="max-width: 1000px;">
-                            <div class="tabs tabs-bb mb-0 clearfix" id="tab-9">
-
-                                <ul class="tab-nav d-flex clearfix">
-                                    <li class="flex-fill"><a href="#tabs-1">17th <span
-                                                class="d-none d-md-inline-block">March</span></a></li>
-                                    <li class="flex-fill"><a href="#tabs-2">18th <span
-                                                class="d-none d-md-inline-block">March</span></a></li>
-                                    <li class="flex-fill"><a href="#tabs-3">19th <span
-                                                class="d-none d-md-inline-block">March</span></a></li>
-                                </ul>
-
-                                <div class="tab-container mt-5">
-                                    <div class="tab-content clearfix" id="tabs-1">
-                                        <dl class="row dark mb-0">
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">8:30 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Registration And Breakfast</div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">9.00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Opening Remarks And Keynote<small>- Piff
-                                                        Jenkins</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">10.00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Web Accessible Designs<small>- Will
-                                                        Barrow</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">11:30 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Delicious Lunch<small>- Cafeteria</small>
-                                                </div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">12.30 pm</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Canvas Rest API<small>- Desmond
-                                                        Eagle</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">2.00 pm</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Building Communities<small>- Jack
-                                                        Steve</small></div>
-                                            </dd>
-
-                                        </dl>
-                                    </div>
-                                    <div class="tab-content clearfix" id="tabs-2">
-                                        <dl class="row dark mb-0">
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">9:00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Why To Attend Event</div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">10.00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Surprise Event<small>- Gunther Beard</small>
-                                                </div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">10.00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Hiring The Right Way in Ecosystem<small>-
-                                                        Will Barrow</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">11:30 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Delicious Lunch<small>- Cafeteria</small>
-                                                </div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">12.45 pm</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Panel Discussion: Future of Canvas<small>-
-                                                        Will Barrow</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">2.30 pm</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Why Should I Choose Customer Support<small>-
-                                                        Indigo Violet</small></div>
-                                            </dd>
-
-                                        </dl>
-                                    </div>
-                                    <div class="tab-content clearfix" id="tabs-3">
-                                        <dl class="row dark mb-0">
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">9:00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">20 Effective Ways To Build A Better Customer
-                                                    Experience</div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">10.00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">How to Prepare for your Hacked
-                                                    website?<small>- Pelican Steve</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">10.00 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Inbound Marketing Strategies for
-                                                    Entrepreneurs<small>- Max Conversion</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">11:30 am</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">Delicious Lunch<small>- Cafeteria</small>
-                                                </div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">2.00 pm</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="schedule-desc">FeedBack, Quiz, Interaction &amp;
-                                                    Gifts<small>- Chauffina Carr, Guy Mann</small></div>
-                                            </dd>
-
-                                            <dt class="col-sm-3">
-                                                <div class="schedule-time font-primary">7.00 pm</div>
-                                            </dt>
-                                            <dd class="col-sm-9">
-                                                <div class="row justify-content-between align-items-center">
-                                                    <div class="col-sm-9">
-                                                        <div class="schedule-desc">After Party<small>- J W
-                                                                Marriot</small></div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <a href="https://maps.google.com" target="_blank"
-                                                            class="button button-small button-black button-dark bg-dark mt-2 mt-sm-0 float-none float-sm-right">View
-                                                            Map</a>
-                                                    </div>
-                                                </div>
-                                            </dd>
-
-                                        </dl>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                <!-- #section-scedule end -->
-
-                {{-- <div class="clear"></div> --}}
 
                 <!-- Section Prices
     ============================================= -->
@@ -556,10 +252,10 @@
                                         <div class="pricing-title title-sm">
                                             <a
                                                 class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
-                                                Cukur Dewasa dan Cuci</a>
+                                                Haircur and Hairwash</a>
                                         </div>
                                         <div class="pricing-price early-bird-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>50.000
+                                            <span class="price-unit">Rp. 50.000</span>
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="early-bird-person"
@@ -578,7 +274,7 @@
                                                 Kids Haircut</a>
                                         </div>
                                         <div class="pricing-price 1-day-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>40.000
+                                            <span class="price-unit">Rp. 40.000</span>
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="1-day-pricing-person"
@@ -594,10 +290,10 @@
                                         <div class="pricing-title title-sm">
                                             <a
                                                 class="button ls0 text-uppercase button-large button-gradient w-100 m-0">
-                                                Jenggot</a>
+                                                Shave</a>
                                         </div>
                                         <div class="pricing-price 2-day-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&#8360;</span>25.000
+                                            <span class="price-unit">Rp. 25.000</span>
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="2-day-pricing-person"
@@ -616,7 +312,7 @@
                                                 Hair Colour</a>
                                         </div>
                                         <div class="pricing-price full-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>80.000
+                                            <span class="price-unit">Rp. 80.000</span>
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="full-pricing-person"
@@ -635,7 +331,7 @@
                                                 Hair SPA</a>
                                         </div>
                                         <div class="pricing-price full-pricing font-primary font-weight-bold">
-                                            <span class="price-unit">&dollar;</span>60.000
+                                            <span class="price-unit">Rp. 60.000</span>
                                         </div>
                                         <div class="pricing-persons">
                                             <select class="required custom-select" name="full-pricing-person"
@@ -759,128 +455,85 @@
                 <div id="section-location" class="section page-section bg-transparent p-0 mb-0 clearfix"
                     style=" overflow: visible">
                     <div class="container">
-                        <div class="mb-5 dark d-flex justify-content-between align-items-center">
+                        <div class="mb-3 dark d-flex justify-content-between align-items-center">
                             <span class="display-4 font-weight-bold gradient-underline mb-0">Locations</span>
                         </div>
-
-                    </div>
-
-                    <div class="position-relative">
-                        <div class="w-100 parallax vh-100" style="top: 0; min-height: 400px"
+                        {{-- <div class="w-100 parallax vh-100" style="top: 0; min-height: 400px"
                             data-top-top="transform: translateY(100px);"
                             data-top-center="transform: translateY(0px);">
                             <div class="gmap h-100" data-address="795 Folsom Ave, CA" data-maptype="ROADMAP"
                                 data-zoom="13" data-scrollwheel="false"
-                                data-markers='[{ address: "795 Folsom Ave, CA", html: "795 Folsom Ave, CA", icon: { image: "demos/conference/images/map-marker.svg", iconsize: [44, 44], iconanchor: [14,44] } }]'
+                                data-markers='[{ address: "795 Folsom Ave, CA", html: "795 Folsom Ave, CA", icon: { image: "web/demos/conference/images/map-marker.svg", iconsize: [44, 44], iconanchor: [14,44] } }]'
                                 data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#666666"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":10}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'>
                             </div>
-                        </div>
-                        <div class="container-bg">
-                            <div class="container">
-                                <div class="row justify-content-between dark">
-                                    <div class="col-md-4 mb-4">
-                                        <h3 class="gradient-underline d-inline-flex mb-5">Gallery</h3>
-                                        <div class="masonry-thumbs grid-container grid-3" data-lightbox="gallery">
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/1.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/1.jpg"
-                                                    alt="Gallery Thumb 1"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/2.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/2.jpg"
-                                                    alt="Gallery Thumb 2"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/3.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/3.jpg"
-                                                    alt="Gallery Thumb 3"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/4.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/4.jpg"
-                                                    alt="Gallery Thumb 4"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/5.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/5.jpg"
-                                                    alt="Gallery Thumb 5"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/6.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/6.jpg"
-                                                    alt="Gallery Thumb 6"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/7.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/7.jpg"
-                                                    alt="Gallery Thumb 7"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/8.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/8.jpg"
-                                                    alt="Gallery Thumb 9"></a>
-                                            <a class="grid-item" href="/web/demos/conference/images/venue/full/9.jpg"
-                                                data-lightbox="gallery-item"><img
-                                                    src="/web/demos/conference/images/venue/9.jpg"
-                                                    alt="Gallery Thumb 10"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 mb-4">
-                                        <h3 class="gradient-underline d-inline-flex mb-5">Our Address</h3>
-                                        <h4 class="font-weight-normal">Jl. Kejayaan No.280, Kota Depok, Jawa Barat
-                                            16417<br>San Francisco, CA
-                                            94107</h4>
-                                        <h4 class="mb-2"> +111-222-33-44</h4>
-                                        <h4 class="mb-2">+222-333-44-55</h4>
-                                        <h4 class="mb-2">no-reply@canvas.com</h4>
-                                    </div>
-                                    <div class="col-md-3 mb-4">
-                                        <h3 class="gradient-underline d-inline-flex mb-5">Follow Us</h3>
-                                        <div class="d-block">
-                                            <a href="#"
-                                                class="social-icon si-colored mb-3 si-rounded si-facebook"
-                                                title="Facebook">
-                                                <i class="icon-facebook"></i>
-                                                <i class="icon-facebook"></i>
-                                            </a>
+                        </div> --}}
 
-                                            <a href="#"
-                                                class="social-icon si-colored mb-3 si-rounded si-delicious"
-                                                title="Delicious">
-                                                <i class="icon-delicious"></i>
-                                                <i class="icon-delicious"></i>
-                                            </a>
 
-                                            <a href="#" class="social-icon si-colored mb-3 si-rounded si-paypal"
-                                                title="Paypal">
-                                                <i class="icon-paypal"></i>
-                                                <i class="icon-paypal"></i>
-                                            </a>
-
-                                            <a href="#" class="social-icon si-colored mb-3 si-rounded si-flattr"
-                                                title="Flattr">
-                                                <i class="icon-flattr"></i>
-                                                <i class="icon-flattr"></i>
-                                            </a>
-
-                                            <a href="#"
-                                                class="social-icon si-colored mb-3 si-rounded si-android"
-                                                title="Android">
-                                                <i class="icon-android"></i>
-                                                <i class="icon-android"></i>
-                                            </a>
-
-                                            <a href="#"
-                                                class="social-icon si-colored mb-3 si-rounded si-smashmag"
-                                                title="Smashmag">
-                                                <i class="icon-smashmag"></i>
-                                                <i class="icon-smashmag"></i>
-                                            </a>
-
-                                            <a href="#" class="social-icon si-colored mb-3 si-rounded si-gplus"
-                                                title="Google Plus">
-                                                <i class="icon-gplus"></i>
-                                                <i class="icon-gplus"></i>
-                                            </a>
-                                        </div>
+                        <div class="row justify-content-between dark">
+                            <div class="col-md-7">
+                                <h3 class="gradient-underline d-inline-flex mb-5">Maps</h3>
+                                <div class="container">
+                                    <div class="fluid-width-video-wrapper" style="padding-top: 81.6667%;">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14685.111694062329!2d106.8514431549865!3d-6.393618691041778!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb5b15b38d31%3A0xb78e66dfb16c9a68!2sMy%20Brother%20Haircare!5e0!3m2!1sid!2sid!4v1681149957649!5m2!1sid!2sid"
+                                            width="600" height="450" style="border:0;" allowfullscreen=""
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-5">
+                                <h3 class="gradient-underline d-inline-flex mb-5">Our Address</h3>
+                                <h4 class="font-weight-normal">Jl. Kejayaan No.280,<br> Kota Depok, Jawa Barat</h4>
+                                <h4 class="mb-2"> +111-222-33-44</h4>
+                                <h4 class="mb-2">+222-333-44-55</h4>
+                                <h4 class="mb-5">no-reply@canvas.com</h4>
+                                <h3 class="gradient-underline d-inline-flex mb-5">Follow Us</h3>
+                                <div class="d-block">
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-facebook"
+                                        title="Facebook">
+                                        <i class="icon-facebook"></i>
+                                        <i class="icon-facebook"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-delicious"
+                                        title="Delicious">
+                                        <i class="icon-delicious"></i>
+                                        <i class="icon-delicious"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-paypal"
+                                        title="Paypal">
+                                        <i class="icon-paypal"></i>
+                                        <i class="icon-paypal"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-flattr"
+                                        title="Flattr">
+                                        <i class="icon-flattr"></i>
+                                        <i class="icon-flattr"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-android"
+                                        title="Android">
+                                        <i class="icon-android"></i>
+                                        <i class="icon-android"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-smashmag"
+                                        title="Smashmag">
+                                        <i class="icon-smashmag"></i>
+                                        <i class="icon-smashmag"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon si-colored mb-3 si-rounded si-gplus"
+                                        title="Google Plus">
+                                        <i class="icon-gplus"></i>
+                                        <i class="icon-gplus"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                 </div><!-- #section-location end -->
@@ -952,10 +605,10 @@
                             <div class="widget clearfix">
                                 <div class="row clearfix">
                                     <div class="col-lg-8 bottommargin-sm clearfix" style="color:#888;">
-                                        <img src="/web/demos/app-landing/images/logo-dark@2x.png" alt="Canvas Logo"
-                                            style="display: block;" height="100">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, consequatur
-                                            facere molestiae iusto atque.</p>
+                                        <img src="/img/my-brother.png" alt="barber Logo" style="display: block;"
+                                            height="100">
+                                        <p>Jl. Kejayaan No.280, Kota Depok,
+                                            Jawa Barat 16417.</p>
 
                                         <a href="#"
                                             class="social-icon si-small si-borderless si-colored si-rounded si-facebook">
@@ -1040,20 +693,6 @@
                 </div>
 
             </div>
-
-            <!-- Copyrights
-   ============================================= -->
-            <div id="copyrights" class="bg-transparent pt-0">
-                <div class="container clearfix">
-
-                    <div class="w-100 text-center text-md-left">
-                        Copyrights &copy; 2021 All Rights Reserved by Canvas Inc.<br>
-                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy
-                                Policy</a></div>
-                    </div>
-
-                </div>
-            </div><!-- #copyrights end -->
         </footer><!-- #footer end -->
 
     </div><!-- #wrapper end -->

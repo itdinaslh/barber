@@ -40,7 +40,10 @@ class DiscountController extends Controller
 
     public function ajaxDiscounts() {
         $data = DB::table('discounts')
-                  ->select('id', 'DiscountID', 'Price', 'ValidUntil', 'IsValid', 'Note');
+                  ->select('id', 'DiscountID', 'Price', 'ValidUntil', 'IsValid', 'Note', \DB::raw('(CASE
+                  WHEN IsPrice = "0" THEN "%"
+                  ELSE "Rp. "
+                  END) AS IsPrice'));
 
         return Datatables::of($data)
                          ->addColumn('action', function($data) {
@@ -93,11 +96,11 @@ class DiscountController extends Controller
 
         $data->DiscountID = $req->DiscountID;
         $data->Price = $req->rPrice;
-        $date = DateTime::createFromFormat('d/m/Y', $req->ValidUntil);
+        $date = $req->ValidUntil;
         $data->ValidUntil = $date;
         $data->IsValid = $req->IsValid;
         $data->Note = $req->Note;
-
+        $data->IsPrice = $req->IsPrice;
         $data->save();
 
         return ['success' => true];

@@ -5,7 +5,9 @@
     <input type="hidden" id="rDisc" name="rDisc" value="0" />
     <input type="hidden" id="rVoucher" name="rVoucher" value="0">
     <input type="hidden" id="rTotal" name="rTotal" value="{{ $TotalHid }}" />
+    <input type="hidden" id="pTotal" name="pTotal" value="{{ $TotalP }}" />
     <input type="hidden" id="rPayVal" name="rPayVal" value="0">
+    <input type="hidden" id="rDiskon" name="rDiskon" value="{{ $DiskonAll }}">
     <input type="hidden" name="trx" value="{{ $trans->id }}" />
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
@@ -25,17 +27,18 @@
             </div>
             <div class="form-group">
                 <label for="IdNum">Total Transaksi</label>
-                <input type="text" id="TotalTrans" class="form-control" name="TotalTrans" value="{{ $TotalString }}"
-                    disabled />
+                <input type="text" id="TotalTrans" class="form-control" name="TotalTrans"
+                    value="{{ $TotalString }}" disabled />
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label for="IdNum">DiscountID</label>
                 <input id="DiscountID" type="text" maxlength="9" class="form-control" name="DiscountID"
                     autocomplete="off" autofocus />
-            </div>
+            </div> --}}
             <div class="form-group">
                 <label for="IdNum">Discount</label>
-                <input id="Discount" type="text" class="form-control" name="Discount" autocomplete="off" disabled />
+                <input id="Discount" type="text" class="form-control" name="Discount" autocomplete="off" disabled
+                    value="{{ $diskonS }}" />
             </div>
             <div class="form-group">
                 <label for="IdNum">Voucher ID</label>
@@ -50,7 +53,7 @@
         <div class="col-md-6 col-xs-12">
             <div class="form-group">
                 <label for="IdNum">Total</label>
-                <input id="SubtotalTrx" type="text" class="form-control" value="{{ $TotalString }}"
+                <input id="SubtotalTrx" type="text" class="form-control" value="{{ $TotalPstring }}"
                     name="SubtotalTrx" disabled />
             </div>
             <div class="form-group">

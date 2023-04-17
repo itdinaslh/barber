@@ -13,9 +13,12 @@
         </div>
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">Main Menu</li>
             <li class="{{ Request::path() == '/' ? 'active' : '' }}">
-                <a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                <a href="{{ url('/') }}"> <span>Kembali ke web</span></a>
+            </li>
+            <li class="header">Main Menu</li>
+            <li class="{{ Request::path() == '/dashboard' ? 'active' : '' }}">
+                <a href="{{ url('/dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
             </li>
             <li class="{{ Request::path() == 'transaction/cashier' ? 'active' : '' }}">
                 <a href="{{ url('/transaction/cashier') }}"><i class="fa fa-th-list"></i> <span>Transaksi

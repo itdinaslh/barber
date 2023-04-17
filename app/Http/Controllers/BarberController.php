@@ -86,11 +86,12 @@ class BarberController extends Controller
 
     //barber service
     public function servicePost(Request $req) {
+        $service = Service::findOrFail($req->ServiceID);
         $data = new Bbserv;
 
         $data->BbID = $req->BbID;
         $data->ServiceID = $req->ServiceID;
-        $data->Harga = $req->Harga;
+        $data->Harga = $service->Harga;
         $data->Fee = $req->Fee;
 
         $data->save();

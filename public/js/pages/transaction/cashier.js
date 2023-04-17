@@ -190,7 +190,7 @@ function VoucherCheck(id) {
                 swal('Warning', 'Voucher kadaluarsa..!!', 'warning');
                 $('#VoucherID').val('');
                 zerovoucher();
-                return false;              
+                return false;
             } else {
                 $('#rVoucher').val('');
                 $('#VoucherVal').val(0);
@@ -325,7 +325,7 @@ $(document).on('keyup', '#PayVal', function() {
 
     var bayar = $(this).autoNumeric('get');
     $('#rPayVal').val(bayar);
-    var total = $('#rTotal').val();
+    var total = $('#pTotal').val();
     var change = bayar - total;
 
     $('#Change').autoNumeric('init', { currencySymbol:'Rp. ', allowDecimalPadding: false, digitGroupSeparator:'.', decimalCharacter: ','});
