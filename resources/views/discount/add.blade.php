@@ -9,6 +9,7 @@
     </div>
     <div class="modal-body">
         <div class="form-group">
+<<<<<<< HEAD
             <label for="Nama">DiskonID</label>
             <input type="text" id="DiscountID" class="form-control" autocomplete="off" name="DiscountID"
                 value="{{ $next }}" maxLength="9" readonly />
@@ -28,6 +29,21 @@
             <label for="Phone">Tanggal Akhir Diskon</label>
             <input id="date" type="text" class="form-control tgl" name="ValidUntil" autocomplete="off"
                 required />
+=======
+            <label for="Phone">Harga Discount</label>
+            <input id="Price" type="text" class="form-control" name="Price" autocomplete="off" required
+                autofocus />
+        </div>
+        <div class="form-group">
+            <label for="Phone">Tanggal Mulai Diskon</label>
+            <input id="Price" type="text" class="form-control tgl" name="Price" autocomplete="off" required
+                autofocus />
+        </div>
+        <div class="form-group">
+            <label for="Phone">Tanggal Akhir Diskon</label>
+            <input id="Price" type="text" class="form-control tgl" name="Price" autocomplete="off" required
+                autofocus />
+>>>>>>> 35f1d8896025d760e141b5a0e5a17df32da31a24
         </div>
         <div class="form-group">
             <label for="IdNum">Valid</label>

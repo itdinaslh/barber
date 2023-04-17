@@ -346,7 +346,7 @@ class TransactionController extends Controller
                   ->join('customer as c', 't.MemberID', '=', 'c.id')
                   ->Join('transbbdetails as t1', 't.id', '=', 't1.TrxID')
                   ->where('t.id', $id)
-                  ->groupBy('t1.TrxID','t.id', 'c.Nama')
+                  ->groupBy('t1.TrxID')
                   ->select(['t.id', 'c.Nama', DB::raw('sum(t1.Price * t1.Qty) as Total')])
                   ->first();
 
