@@ -126,7 +126,7 @@ class DiscountController extends Controller
         $date = DateTime::createFromFormat('d/m/Y', $req->ValidUntil);
         $data->ValidUntil = $date;
         $data->Note = $req->Note;
-
+        $data->IsValid = $req->IsValid;
         $data->save();
 
         return ['success' => true];
