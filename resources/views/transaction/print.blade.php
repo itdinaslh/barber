@@ -187,12 +187,12 @@
                     </tbody>
                 </table>
             </div>
-            <div id="foot" style="margin-bottom : 40 px font-weight:bold">
+            {{-- <div id="foot" style="margin-bottom : 40 px font-weight:bold">
                 {!! $note->Content !!}
                 <div class="">
                     Terima kasih atas kunjungan anda
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
