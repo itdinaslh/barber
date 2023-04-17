@@ -60,7 +60,7 @@
         <div class="col-xs-12 myCenter" style="margin-top:4mm;">
             <div>
                 {{-- <img src="{{ asset('/img/logo-small.png') }}" class="img img-responsive logo" alt="" /> --}}
-                <span style="font-size:35px;font-weight:bold;text-align:center">My Brother
+                <span style="font-size:35px;font-weight:bold;text-align:center ; text-decoration :underline ">My Brother
                     Haircare</span>
             </div>
         </div>
