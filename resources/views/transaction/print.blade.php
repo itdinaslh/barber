@@ -187,6 +187,9 @@
                     </tbody>
                 </table>
             </div>
+            <div>
+                <br>
+            </div>
             {{-- <div id="foot" style="margin-bottom : 40 px font-weight:bold">
                 {!! $note->Content !!}
                 <div class="">
