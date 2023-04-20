@@ -189,7 +189,13 @@
             </div>
             <div>
                 <br>
+                <p style="font-size:35px;font-weight:bold;text-align:center ; text-decoration :underline"> Terima kasih atas
+                    kunjungan anda</p>
+                <br>
+                <br>
+                <hr>
             </div>
+
             {{-- <div id="foot" style="margin-bottom : 40 px font-weight:bold">
                 {!! $note->Content !!}
                 <div class="">
