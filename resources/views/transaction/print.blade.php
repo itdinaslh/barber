@@ -193,7 +193,7 @@
                 <p style="font-size:20px;font-weight:bold;text-align:center ; text-decoration :underline"> Terima kasih atas
                     kunjungan anda</p>
                 <br>
-                <br>
+                <p style="font-size:20px;font-weight:bold;text-align:center ; text-decoration :underline">------</p>
                 <hr>
             </div>
 
