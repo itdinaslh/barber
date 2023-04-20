@@ -62,6 +62,7 @@
                 {{-- <img src="{{ asset('/img/logo-small.png') }}" class="img img-responsive logo" alt="" /> --}}
                 <span style="font-size:35px;font-weight:bold;text-align:center ; text-decoration :underline ">My Brother
                     Haircare</span>
+                <br>
             </div>
         </div>
     </div>
@@ -189,7 +190,7 @@
             </div>
             <div>
                 <br>
-                <p style="font-size:35px;font-weight:bold;text-align:center ; text-decoration :underline"> Terima kasih atas
+                <p style="font-size:14px;font-weight:bold;text-align:center ; text-decoration :underline"> Terima kasih atas
                     kunjungan anda</p>
                 <br>
                 <br>
