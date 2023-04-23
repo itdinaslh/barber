@@ -25,6 +25,7 @@ Route::get('/test', function() {
 });
 
 Route::get('/barberman', [BarberApiController::class, 'index']);
+Route::get('/operational/list', [CostApiController::class, 'getOpList']);
 
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -34,7 +35,8 @@ Route::get('/barberman', [BarberApiController::class, 'index']);
 Route::middleware('auth:sanctum')->group(function() {
     Route::get('/user', [UserApiController::class, 'index']);
     Route::get('/transaction/sumtoday', [TransApiController::class, 'sumTodayCard']);
-    Route::get('/transaction/today', [TransApiCOntroller::class, 'today']);
+    Route::post('/transaction/daily', [TransApiCOntroller::class, 'daily']);
     Route::get('/cost/thismonth', [CostApiController::class, 'monthly']);
     Route::post('/logout', [UserApiController::class, 'logout']);
+    Route::post('/cost/store', [CostApiController::class, 'storeCost']);
 });

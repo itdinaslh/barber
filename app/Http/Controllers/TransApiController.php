@@ -8,10 +8,10 @@ use DB;
 
 class TransApiController extends Controller
 {
-    public function today() {
+    public function daily(Request $v) {
         date_default_timezone_set('Asia/Jakarta');
 
-        $now = date('Y-m-d');
+        $now = $v->Tanggal;
 
         $awal = $now.' 00:00:00';
         $akhir = $now.' 23:59:59';
