@@ -25,6 +25,7 @@ Route::get('/test', function() {
 });
 
 Route::get('/barberman', [BarberApiController::class, 'index']);
+Route::get('/operational/list', [CostApiController::class, 'getOpList']);
 
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -34,4 +34,12 @@ class CostApiController extends Controller
 
         return response()->json($data, 200);
     }
+
+    public function getOpList() {
+        $data = DB::table('operational')
+            ->select('id', 'NamaOp')
+            ->get();
+
+        return response()->json($data, 200);
+    }
 }
