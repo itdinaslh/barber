@@ -56,6 +56,14 @@ class TransApiController extends Controller
             ->whereBetween('t.created_at', [$awal, $akhir])
             ->first();
 
+        $transMonthly = DB::table('transactions as t')
+            ->select(
+                DB::raw('COALESCE(SUM(t.TotalPaid), 0) as TotalSum')
+            )
+            ->where('t.Lock', 1)
+            ->whereBetween('t.created_at', [$firstDate, $lastDate])
+            ->first();
+
         $cost = DB::table('cost_op as co')
             ->select(
                 DB::raw('COALESCE(SUM(co.Total), 0) as TotalCost')
@@ -68,6 +76,7 @@ class TransApiController extends Controller
         $arr = array("TotalSum" => 0, "TotalCount" => 0, "TotalCost" => 0);
 
         $arr['TotalSum'] = $trans->TotalSum != 0 ? number_format($trans->TotalSum, 0, ',', '.') : '0';
+        $arr['MonthlyIncome'] = $transMonthly->TotalSum != 0 ? number_format($transMonthly->TotalSum, 0, ',', '.') : '0';
         $arr['TotalCount'] = $trans->TotalCount != 0 ? number_format($trans->TotalCount, 0, ',', '.') : '0';
         $arr['TotalCost'] = $costVal;
 
