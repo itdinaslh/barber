@@ -8,6 +8,7 @@ use App\Models\CostOp;
 use App\Models\Operational;
 use DateTime;
 use Carbon\Carbon;
+use Auth;
 
 class CostApiController extends Controller
 {
@@ -33,5 +34,31 @@ class CostApiController extends Controller
         }
 
         return response()->json($data, 200);
+    }
+
+    public function getOpList() {
+        $data = DB::table('operational')
+            ->select('id', 'NamaOp')
+            ->get();
+
+        return response()->json($data, 200);
+    }
+
+    public function storeCost(Request $v) {
+        $data = new CostOp;
+
+        $date = DateTime::createFromFormat('d-m-Y', $v->Tanggal);
+
+        $data->Tanggal = $date->format('Y-m-d');
+        $data->opID = $v->opID;
+        $data->Price = (int)$v->Price;
+        $data->Qty = (int)$v->Qty;
+        $data->total = (int)$v->Price * (int)$v->Qty;
+        $data->ket = $v->ket;
+        $data->created_by = Auth::user()->name;
+
+        $data->save();
+
+        return response()->json(['ok'], 200);
     }
 }
