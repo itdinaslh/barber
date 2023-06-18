@@ -123,6 +123,7 @@ class DiscountController extends Controller
 
         $data->DiscountID = $req->DiscountID;
         $data->Price = $req->rPrice;
+        $data->IsPrice = $req->IsPrice;
         $date = DateTime::createFromFormat('d/m/Y', $req->ValidUntil);
         $data->ValidUntil = $date;
         $data->Note = $req->Note;
