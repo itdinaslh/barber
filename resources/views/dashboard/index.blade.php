@@ -23,7 +23,7 @@
                 <div class="info-box-content">
                     <span class="info-box-text">Total Minggu ini</span>
                     <span class="info-box-number">{{ $week }}</span>
-                    <span class="info-box-number">Rp. {{ number_format($todaytotal, 0, ',', '.') }}</span>
+                    <span class="info-box-number">Rp. {{ number_format($weektotal, 0, ',', '.') }}</span>
                 </div>
             </div>
         </div>
