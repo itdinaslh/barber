@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-md-4">
             <div class="info-box bg-aqua">
                 <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
                 <div class="info-box-content">
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-md-4">
             <div class="info-box bg-red">
                 <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
                 <div class="info-box-content">
