@@ -17,6 +17,8 @@ use App\Http\Controllers\CostOpController;
 use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\PembayaranController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -189,6 +191,15 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/notes/edit/{id}', [NoteController::class, 'EditGet']);
     Route::post('/notes/editpost', [NoteController::class, 'EditPost']);
     Route::get('/notes/activate/{id}', [NoteController::class, 'Activate']);
+
+    // metode_pembayaran Controllers
+    Route::get('/master/metode_pembayaran', [PembayaranController::class, 'index']);
+    Route::get('/metode_pembayaran/ajaxdata', [PembayaranController::class, 'ajaxData']);
+    Route::get('/metode_pembayaran/add', [PembayaranController::class, 'AddNew']);
+    Route::post('/metode_pembayaran/addpost', [PembayaranController::class, 'AddPost']);
+    Route::get('/metode_pembayaran/edit/{id}', [PembayaranController::class, 'EditGet']);
+    Route::post('/metode_pembayaran/editpost', [PembayaranController::class, 'EditPost']);
+    Route::get('/metode_pembayaran/delserv/{id}', [PembayaranController::class, 'deleteService']);
 
     //Report Routes
     Route::get('/reports/lapbbman', [ReportController::class, 'LapBBMan']);

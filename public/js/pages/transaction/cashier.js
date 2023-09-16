@@ -296,10 +296,10 @@ $('body').on('change', '#payment', function() {
         $('#PayVal').focus();
     } else {
         $('#CardView').show();
-        $('#PayVal').autoNumeric('set', $('#rTotal').val());
+        $('#PayVal').autoNumeric('set', $('#pTotal').val());
         $('#PayVal').prop('disabled', true);
         $('#ChangeView').hide();
-        $('#rPayVal').val($('#rTotal').val());
+        $('#rPayVal').val($('#pTotal').val());
         $('#CardID').focus();
     }
 });

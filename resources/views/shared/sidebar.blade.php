@@ -98,6 +98,10 @@
                             <a href="{{ url('/master/user/all') }}"><i class="fa fa-user-plus"></i>
                                 <span>Users</span></a>
                         </li>
+                        <li class="{{ Request::path() == 'master/metode_pembayaran' ? 'active' : '' }}">
+                            <a href="{{ url('/master/metode_pembayaran') }}"><i class="fa fa-user-plus"></i>
+                                <span>Metode Pembayran</span></a>
+                        </li>
                     </ul>
                 </li>
                 <li class="treeview {{ Request::is('reports/*') ? 'active' : '' }}">
