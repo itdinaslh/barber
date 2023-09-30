@@ -196,8 +196,9 @@ class ReportController extends Controller
         $end = DateTime::createFromFormat('d-m-Y H:i:s', $akhir);
 
         $recap = DB::table('transactions as t')
-                    ->select(DB::raw('sum(TotalPaid) as Cash'), DB::raw('sum(VoucherVal) as Voucher'), DB::raw('sum(Discount) as Discount'))
+                    ->select(DB::raw('sum(TotalPaid) as Cash'), DB::raw('sum(VoucherVal) as Voucher'), DB::raw('sum(Discount) as Discount'), DB::raw('count(id) as TotalCus'))
                     ->whereBetween('t.created_at', [$first, $end])
+                    ->where('t.Lock', '1')
                     ->first();
 
         $total = $recap->Cash + $recap->Voucher + $recap->Discount;
@@ -207,8 +208,9 @@ class ReportController extends Controller
         $recap->Discount = number_format($recap->Discount, 0, ',', '.');
 
         $total = number_format($total, 0, ',', '.');
+        $TotalCus =$recap->TotalCus;
 
-        return view('cashier.reports.recapprint', ['recap' => $recap, 'first' => $date1, 'end' => $date2, 'total' => $total]);
+        return view('cashier.reports.recapprint', ['recap' => $recap, 'first' => $date1, 'end' => $date2, 'total' => $total, 'TotalCus'=>$TotalCus]);
     }
 
     public function PrintLapTrans($tglawal, $tglakhir) {

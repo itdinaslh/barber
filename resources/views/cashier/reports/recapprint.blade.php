@@ -45,6 +45,11 @@ body {
                       <td>{{ $recap->Cash }}</td>
                   </tr>
                   <tr>
+                    <td>Total Pelanggan</td>
+                    <td>:</td>
+                    <td>{{$recap->TotalCus}}</td>
+                  </tr>
+                  <tr>
                       <td>Voucher</td>
                       <td style="padding-left:5px;padding-right:10px;">:</td>
                       <td>{{ $recap->Voucher }}</td>
