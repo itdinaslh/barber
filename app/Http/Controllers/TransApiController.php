@@ -26,13 +26,25 @@ class TransApiController extends Controller
             ->orderBy('t.id', 'desc')
             ->get();
 
+        $total = DB::table('transactions as t')
+            ->select(
+                DB::raw('COALESCE(SUM(t.TotalPaid), 0) as TotalSum')
+            )
+            ->where('t.Lock', 1)
+            ->whereBetween('t.created_at', [$awal, $akhir])
+            ->first();
+
         if (!is_null($trans)) {
             foreach($trans as $row) {
                 $row->TotalPaid = number_format($row->TotalPaid, 0, ',', '.');
             }
         }
 
-        return response()->json($trans, 200);
+        $totalVal = number_format($total->TotalSum, 0, ',', '.');
+
+        $arr = array("Total" => $totalVal, "trans" => $trans);
+
+        return response()->json($arr, 200);
     }
 
     public function sumTodayCard() {
