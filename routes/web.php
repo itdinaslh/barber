@@ -42,6 +42,9 @@ Route::get('/home', function () {
     return redirect('/dashboard');
 });
 Route::group(['middleware' => ['auth']], function() {
+    //ajax dashboard
+    Route::get('/dashboard_chart', [DashboardController::class, 'ajax']);
+
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     // Product routes

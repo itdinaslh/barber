@@ -37,5 +37,69 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-12">
+            <div id="chart">
+
+            </div>
+        </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        var options = {
+        chart: {
+            height: 350,
+            type: 'bar',
+        },
+        dataLabels: {
+            enabled: false
+        },
+        series: [],
+        title: {
+            text: 'Total Transaksi perbulan',
+        },
+        theme: {
+            monochrome: {
+                enabled: true,
+                color: '#255aee',
+                shadeTo: 'light',
+                shadeIntensity: 0.65
+            }
+        },
+        fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                type: "horizontal",
+                shadeIntensity: 0.5,
+                gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+                inverseColors: true,
+                opacityFrom: 1,
+                opacityTo: 1,
+                stops: [0, 50, 100],
+                colorStops: []
+            }
+        },
+
+        noData: {
+            text: 'Loading...'
+        }
+        }
+
+        var chart = new ApexCharts(
+        document.querySelector("#chart"),
+        options
+        );
+
+chart.render();
+        chart.render();
+        $.getJSON('/dashboard_chart', function(response) {
+        chart.updateSeries([{
+          name: 'Sales',
+          data: response
+        }])
+    });
+    </script>
+@endpush
